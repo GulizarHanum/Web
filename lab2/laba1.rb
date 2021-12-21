@@ -1,8 +1,17 @@
+if (Gem.win_platform?)
+  Encoding.default_external = Encoding.find(Encoding.locale_charmap)
+  Encoding.default_internal = __ENCODING__
+
+  [STDIN, STDOUT].each do |io|
+    io.set_encoding(Encoding.default_external, Encoding.default_internal)
+  end
+end
+
 def greeting
   puts 'Введите имя: '
-  input_name = gets
+  input_name = gets.chomp
   puts 'Введите фамилию: '
-  input_surname = gets
+  input_surname = gets.chomp
   puts 'Введите возраст: '
   input_age = gets.to_i
   if input_age.to_i < 18
@@ -54,3 +63,4 @@ def menu
     end
   end
 end
+menu()
