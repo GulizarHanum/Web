@@ -1,7 +1,7 @@
 require 'rspec'
 require 'stringio'
 
-require_relative 'task3'
+require_relative 'lab3'
 
 describe "Balance operations" do
 
