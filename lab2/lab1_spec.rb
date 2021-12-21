@@ -3,7 +3,7 @@ require './laba1.rb'
 
 describe "Greeting" do
   it 'should do ok for age equal or bigger than 18' do
-    allow_any_instance_of(Kernel).to receive(:gets).and_return('Гулизар', 'Измайлова', 21)
+    allow_any_instance_of(Kernel).to receive(:gets).and_return('Гулизар', 'Измайлова', 19)
     expect(greeting).to eql("Привет, Гулизар Измайлова. \nСамое время заняться делом!")
     allow_any_instance_of(Kernel).to receive(:gets).and_return('Иван', 'Щи', 20)
     expect(greeting).to eql("Привет, Иван Щи. \nСамое время заняться делом!")
