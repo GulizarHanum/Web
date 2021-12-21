@@ -176,5 +176,4 @@ module Resource
     end
   end
   
-  router = Router.new
-  router.init
+ 
